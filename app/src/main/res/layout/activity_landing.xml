@@ -14,7 +14,22 @@
         android:layout_height="wrap_content"
         android:text="Go to Map Activity"
         android:id="@+id/go_to_map_activity"
+        android:layout_marginTop="75dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="175dp" />
+        android:background="@android:color/holo_red_dark"
+        android:textColor="#ffffff"
+        android:padding="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Places"
+        android:id="@+id/search_places_button"
+        android:layout_marginTop="131dp"
+        android:background="@android:color/holo_red_dark"
+        android:textColor="#ffffff"
+        android:padding="10dp"
+        android:layout_below="@+id/go_to_map_activity"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

@@ -8,9 +8,10 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.androidmaps.SplashActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+<LinearLayout
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:background="@drawable/google_maps_icon"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"></LinearLayout>
 </RelativeLayout>
