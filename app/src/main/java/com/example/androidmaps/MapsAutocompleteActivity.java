@@ -4,12 +4,15 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
 import com.google.android.gms.location.places.ui.PlaceSelectionListener;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -54,6 +57,7 @@ public class MapsAutocompleteActivity extends FragmentActivity implements OnMapR
     // TODO: Get info about the selected place.
         Log.i(TAG, "Place: " + place.getName());
         Toast.makeText(this,  "Place: " + place.getName(), Toast.LENGTH_LONG);
+        goToLocation(place);
     }
 
     @Override
@@ -61,5 +65,17 @@ public class MapsAutocompleteActivity extends FragmentActivity implements OnMapR
     // TODO: Handle the error.
         Log.i(TAG, "An error occurred: " + status);
         Toast.makeText(this, "An error occurred: " + status, Toast.LENGTH_LONG);
+    }
+
+    private void goToLocation(Place place){
+        hideSoftKeyboard(findViewById(R.id.place_autocomplete_fragment));
+        CameraUpdate update = CameraUpdateFactory.newLatLngZoom(place.getLatLng(),DEFAULT_ZOOM_MAP);
+        gMap.moveCamera(update);
+
+    }
+
+    private void hideSoftKeyboard(View v) {
+        InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(v.getWindowToken(),0);
     }
 }
