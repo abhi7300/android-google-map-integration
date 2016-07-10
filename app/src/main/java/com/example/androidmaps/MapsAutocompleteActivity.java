@@ -52,7 +52,7 @@ public class MapsAutocompleteActivity extends FragmentActivity implements OnMapR
     @Override
     public void onMapReady(GoogleMap googleMap) {
         gMap = googleMap;
-        LatLng barrackpore = new LatLng(-34, 151);
+        LatLng barrackpore = new LatLng(22.7604, 88.3579);
         gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(barrackpore, DEFAULT_ZOOM_MAP));
 
     }

@@ -3,4 +3,5 @@
     <string name="title_activity_maps">Map</string>
     <string name="search">Go</string>
     <string name="location">Location</string>
+    <string name="place_name_autocomplete_example">Place name autocomplete example</string>
 </resources>

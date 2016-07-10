@@ -46,7 +46,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.androidmaps.LandingActivity" />
         </activity>
-        <activity android:name=".SearchLocationActivity"></activity>
+        <activity android:name=".SearchLocationActivity" />
+        <activity android:name=".MapsAutocompleteActivity"></activity>
     </application>
 
 </manifest>
