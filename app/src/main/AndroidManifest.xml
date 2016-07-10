@@ -47,7 +47,8 @@
                 android:value="com.example.androidmaps.LandingActivity" />
         </activity>
         <activity android:name=".SearchLocationActivity" />
-        <activity android:name=".MapsAutocompleteActivity"></activity>
+        <activity android:name=".MapsAutocompleteActivity" />
+        <activity android:name=".AutocompleteMapActivity"></activity>
     </application>
 
 </manifest>

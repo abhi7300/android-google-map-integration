@@ -41,7 +41,7 @@ public class LandingActivity extends AppCompatActivity implements View.OnClickLi
                 break;
             case R.id.places_autocomplete_button:
                 Log.d("Landing Activity", "Autocomplete place name button clicked.");
-                startMapsAutocompleteActivity();
+                startAutocompleteMapActivity();
                 break;
             case R.id.search_business_by_name_button:
                 break;
@@ -58,9 +58,9 @@ public class LandingActivity extends AppCompatActivity implements View.OnClickLi
         }
     }
 
-    private void startMapsAutocompleteActivity() {
+    private void startAutocompleteMapActivity() {
 
-        Intent autocompleteIntent = new Intent(this, MapsAutocompleteActivity.class);
+        Intent autocompleteIntent = new Intent(this, AutocompleteMapActivity.class);
         startActivity(autocompleteIntent);
         finish();
     }
